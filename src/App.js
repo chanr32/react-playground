@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navigation from "./Navigation";
-import Home from "./Home";
-import Book from "./Book";
+import Navigation from "./components/navigation";
+import Home from "./components/home";
+import Users from "./components/users";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Navigation />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/book" exact component={Book} />
+          <Route path="/users" exact component={Users} />
         </Switch>
       </div>
     </Router>
