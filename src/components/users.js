@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getUsers } from "../store/actions/usersAction";
+import { Link } from "react-router-dom";
 
 class users extends Component {
   componentDidMount() {
@@ -14,7 +15,9 @@ class users extends Component {
       <div>
         {users.map((u) => (
           <React.Fragment key={u.id}>
-            <h6>{u.name}</h6>
+            <Link to={"/user/" + u.id}>
+              <h6>{u.name}</h6>
+            </Link>
           </React.Fragment>
         ))}
       </div>
