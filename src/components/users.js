@@ -12,10 +12,10 @@ class users extends Component {
     console.log(this.props.users);
 
     return (
-      <div>
+      <div class="list-group">
         {users.map((u) => (
           <React.Fragment key={u.id}>
-            <Link to={"/user/" + u.id}>
+            <Link to={"/user/" + u.id} className="list-group-item">
               <h6>{u.name}</h6>
             </Link>
           </React.Fragment>
